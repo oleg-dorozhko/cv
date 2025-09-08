@@ -70,9 +70,30 @@ window.addEventListener("load", function(){
 		navigator.clipboard.writeText(global_vars_email);
         /* Alert the copied text */
 		alert("Copied");
+	
 	}
+	 
+    const selector = document.getElementById("selector");
+    const div1 = document.getElementById("uk_version");
+    const div2 = document.getElementById("en_version");
+	div2.classList.add("hidden");
+
+    selector.addEventListener("change", function() {
+      // Спочатку ховаємо обидва
+      div1.classList.add("hidden");
+      div2.classList.add("hidden");
+
+      // Показуємо потрібний
+      if (this.value === "uk_version") {
+        div1.classList.remove("hidden");
+      } else if (this.value === "en_version") {
+        div2.classList.remove("hidden");
+      }
+    });
+  
 	
 }); 
+
 var global_n=1;
 function voicestart(s) {
 		  
@@ -100,3 +121,4 @@ function voicestart(s) {
 	}
 		  
 }		  
+
