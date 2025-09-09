@@ -47,7 +47,13 @@ window.addEventListener("load", function(){
 	})
 	.catch(err => console.error(err));
 
-	document.getElementById("mobile").onclick = function(){
+	document.getElementById("en_mobile").onclick = function(){
+        navigator.clipboard.writeText(global_vars_mobile);
+	    alert("Copied");// the text: " + copyTextValue);
+		//voicestart("+ 3 8 0 9 5 4 4 4 3 6 1 8 ");
+	}
+	
+	document.getElementById("en_mobile").oncontextmenu = function(){
         navigator.clipboard.writeText(global_vars_mobile);
 	    alert("Copied");// the text: " + copyTextValue);
 		//voicestart("+ 3 8 0 9 5 4 4 4 3 6 1 8 ");
@@ -60,13 +66,33 @@ window.addEventListener("load", function(){
 		return false;
 	}
 	
+	document.getElementById("mobile").onclick = function(){
+        navigator.clipboard.writeText(global_vars_mobile);
+	    alert("Copied");// the text: " + copyTextValue);
+		//voicestart("+ 3 8 0 9 5 4 4 4 3 6 1 8 ");
+		return false;
+	}
+	
 	document.getElementById("email").onclick = function(){
 		navigator.clipboard.writeText(global_vars_email);
         /* Alert the copied text */
 		alert("Copied");
 	}
 	
-	document.getElementById("email").oncontext = function(){
+	document.getElementById("en_email").onclick = function(){
+		navigator.clipboard.writeText(global_vars_email);
+        /* Alert the copied text */
+		alert("Copied");
+	
+	}
+	
+	document.getElementById("email").oncontextmenu = function(){
+		navigator.clipboard.writeText(global_vars_email);
+        /* Alert the copied text */
+		alert("Copied");
+	}
+	
+	document.getElementById("en_email").oncontextmenu = function(){
 		navigator.clipboard.writeText(global_vars_email);
         /* Alert the copied text */
 		alert("Copied");
